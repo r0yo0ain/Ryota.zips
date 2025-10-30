@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>写真ギャラリー</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", "Noto Sans JP", sans-serif;
+      font-weight: 300;
+      text-align: center;
+      margin: 0;
+      padding: 40px 0;
+      background-image: url("images/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+      color: #222;
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 40px;
+      text-shadow: 0 0 8px rgba(0,0,0,0.5);
+    }
+
+    /* グリッドで4枚ずつ並べる */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto 60px auto;
+      padding: 0 20px;
+    }
+
+    .photo {
+      background: rgba(255,255,255,0.85);
+      border-radius: 8px;
+      padding: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.03);
+    }
+
+    .photo img {
+      width: 100%;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .caption {
+      text-align: right;
+      font-size: 14px;
+      color: #333;
+      margin-top: 6px;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <h1>zips</h1>
+
+  <!-- ▼ photo1〜9 ▼ -->
+  <div class="gallery">
+    <div class="photo">
+      <a href="https://latelierdesparfums.jp/products/acne-studios-par-fm?variant=43287494688963" target="_blank">
+        <img src="images/photo1.jpg" alt="ｱｸﾈ ｽﾄｩﾃﾞｨｵｽﾞ">
+        <p class="caption">ｱｸﾈ ｽﾄｩﾃﾞｨｵｽﾞ</p>
+      </a>
+    </div>
+
+    <div class="photo">
+      <a href="https://forte-tyo.co.jp/shopping/product/tabac-exquis/" target="_blank">
+        <img src="images/photo2.jpg" alt="ｷｬﾛﾝ">
+        <p class="caption">ｷｬﾛﾝ</p>
+      </a>
+    </div>
+
+    <div class="photo">
+      <a href="https://jp.burberry.com/burberry-her-eau-de-parfum-intense-100ml-p40848111" target="_blank">
+        <img src="images/photo3.jpg" alt="ﾊﾞｰﾊﾞﾘｰ">
+        <p class="caption">ﾊﾞｰﾊﾞﾘｰ</p>
+      </a>
+    </div>
+
+    <div class="photo">
+      <img src="images/photo4.jpg" alt="ｱｸﾈ ｽﾄｩﾃﾞｨｵｽﾞ">
+      <p class="caption">ｱｸﾈ ｽﾄｩﾃﾞｨｵｽﾞ</p>
+    </div>
+
+    <div class="photo">
+      <a href="https://latelierdesparfums.jp/collections/penhaligons/products/pen-the-cut-edp?variant=52309765554539" target="_blank">
+        <img src="images/photo5.jpg" alt="ﾍﾟﾝﾊﾘｶﾞﾝ">
+        <p class="caption">ﾍﾟﾝﾊﾘｶﾞﾝ</p>
+      </a>
+    </div>
+
+    <div class="photo">
+      <a href="https://lesillage-kyoto.shop/products/rose-griotte" target="_blank">
+        <img src="images/photo6.jpg" alt="ﾊﾟﾙﾌｧﾝ・ﾛｼﾞｰﾇ">
+        <p class="caption">ﾊﾟﾙﾌｧﾝ・ﾛｼﾞｰﾇ</p>
+      </a>
+    </div>
+
+    <div class="photo">
+      <a href="https://forte-tyo.co.jp/shopping/product/rose-ivoire/" target="_blank">
+        <img src="images/photo7.jpg" alt="ｷｬﾛﾝ">
+        <p class="caption">ｷｬﾛﾝ</p>
+      </a>
+    </div>
+
+    <div class="photo">
+      <img src="images/photo8.jpg" alt="">
+      <p class="caption"></p>
+    </div>
+
+    <div class="photo">
+      <a href="https://forte-tyo.co.jp/shopping/product/812/" target="_blank">
+        <img src="images/photo9.jpg" alt="ﾊﾟﾙﾌｧﾝ・ﾛｼﾞｰﾇ">
+        <p class="caption">ﾊﾟﾙﾌｧﾝ・ﾛｼﾞｰﾇ</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- ▼ 改行して photo10〜12 ▼ -->
+  <div class="gallery">
+    <div class="photo">
+      <img src="images/photo10.jpg" alt="ｲﾌﾟｻ">
+      <p class="caption">ｲﾌﾟｻ</p>
+    </div>
+
+    <div class="photo">
+      <img src="images/photo11.jpg" alt="ｲﾌﾟｻ">
+      <p class="caption">ｲﾌﾟｻ</p>
+    </div>
+
+    <div class="photo">
+      <img src="images/photo12.jpg" alt="ｾﾝｻｲ">
+      <p class="caption">ｾﾝｻｲ</p>
+    </div>
+  </div>
+
+<script>
+  // 外部リンクはすべて新しいタブで開く
+  document.querySelectorAll('a[href^="http"]').forEach(link => {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
+</script>
+
+
+</body>
+</html>
+
